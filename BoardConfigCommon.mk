@@ -30,6 +30,8 @@ USE_CAMERA_STUB := true
 
 TARGET_SPECIFIC_HEADER_PATH := device/samsung/jf-common/include
 
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.6
+
 # Kernel
 TARGET_KERNEL_SOURCE        := kernel/samsung/jf
 BOARD_KERNEL_CMDLINE        := androidboot.hardware=qcom user_debug=31 zcache

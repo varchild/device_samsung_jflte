@@ -19,5 +19,7 @@
 -->
 <resources>
     <!-- Pie service: Thickness of the active trigger fields around the screen border -->
+    <!-- TODO: this!
     <dimen name="pie_trigger_thickness">10dp</dimen>
+    -->
 </resources>

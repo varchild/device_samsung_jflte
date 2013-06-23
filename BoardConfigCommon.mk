@@ -43,6 +43,15 @@ TARGET_KERNEL_SELINUX_CONFIG := jfselinux_defconfig
 
 TARGET_BOOTLOADER_BOARD_NAME := MSM8960
 
+TARGET_EXTRA_CFLAGS := -mtune=cortex-a15 -mcpu=cortex-a9
+TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI2 := armeabi
+TARGET_CPU_SMP := true
+TARGET_ARCH := arm
+TARGET_ARCH_VARIANT := armv7-a-neon
+TARGET_ARCH_VARIANT_CPU := cortex-a9
+ARCH_ARM_HAVE_TLS_REGISTER := true
+
 # Recovery
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/jf-common/recovery/recovery_keys.c
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"

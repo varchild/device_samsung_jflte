@@ -69,7 +69,7 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc
 
 # Torch
-PRODUCT_PACKAGES += Torch
+#PRODUCT_PACKAGES += Torch
 
 # Vold configuration
 PRODUCT_COPY_FILES += \

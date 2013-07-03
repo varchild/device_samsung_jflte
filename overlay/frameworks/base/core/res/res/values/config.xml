@@ -228,7 +228,7 @@
     <bool name="config_batterySdCardAccessibility">true</bool>
 
     <!-- Disable the home key unlock setting -->
-    <!-- TODO: this!
+    <!--TODO: THIS
     <bool name="config_disableHomeUnlockSetting">false</bool>
     -->
 
@@ -242,14 +242,12 @@
             16 - App switch
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
-    <!-- TODO: this!
     <integer name="config_deviceHardwareKeys">7</integer>
-    -->
 
     <bool name="config_enableWifiDisplay">true</bool>
 
     <!-- Panel auto-brightness configuration value -->
-    <!-- TODO: this!
+    <!--TODO: THIS
     <integer name="config_panelAutoBrightnessValue">1</integer>
     -->
 

@@ -30,8 +30,6 @@ USE_CAMERA_STUB := true
 
 TARGET_SPECIFIC_HEADER_PATH := device/samsung/jf-common/include
 
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.6
-
 # Kernel
 TARGET_KERNEL_SOURCE        := kernel/samsung/jf
 BOARD_KERNEL_CMDLINE        := androidboot.hardware=qcom user_debug=31 zcache
@@ -43,14 +41,15 @@ TARGET_KERNEL_SELINUX_CONFIG := jfselinux_defconfig
 
 TARGET_BOOTLOADER_BOARD_NAME := MSM8960
 
-TARGET_EXTRA_CFLAGS := -mtune=cortex-a15 -mcpu=cortex-a9
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_SMP := true
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
-TARGET_ARCH_VARIANT_CPU := cortex-a9
+TARGET_ARCH_VARIANT_CPU := cortex-a15
 ARCH_ARM_HAVE_TLS_REGISTER := true
+
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.6
 
 # Recovery
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/jf-common/recovery/recovery_keys.c
@@ -96,4 +95,3 @@ BOARD_USES_SEPERATED_VOIP := true
 
 # Use seperate devices for 3-pole headset
 BOARD_USES_SEPERATED_HEADSET_MIC := true
-

@@ -119,6 +119,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # QRNGD
 PRODUCT_PACKAGES += qrngd
 
+# Prepatch to fix BT/WiFi bus lockups
+PRODUCT_COPY_FILES += device/samsung/jf-common/bluetooth/bcm4335_prepatch.hcd:system/vendor/firmware/bcm4335_prepatch.hcd
+
 #common build.props
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.chipname=apq8064 \
@@ -165,7 +168,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.rild.nitz_short_ons_1="" \
     persist.rild.nitz_short_ons_2="" \
     persist.rild.nitz_short_ons_3="" \
-    ro.telephony.ril.v3=googleEditionSS
+    ro.telephony.ril.v3=googleEditionSS,newDriverCall
 
 # call common msm8960
 $(call inherit-product, device/samsung/msm8960-common/msm8960.mk)

@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+PRODUCT_RESTRICT_VENDOR_FILES := false
+
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 ## (2) Also get non-open-source specific aspects if available

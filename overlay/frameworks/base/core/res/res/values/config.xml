@@ -239,4 +239,5 @@
     <integer name="config_panelAutoBrightnessValue">1</integer>
     -->
 
+    <bool name="config_noDelayInATwoDP">true</bool>
 </resources>

@@ -87,7 +87,7 @@ lib/libqmi_common_so.so
 lib/libqmi_csi.so
 lib/libqmi_encdec.so
 lib/libqcci_legacy.so
-lib/libqmi_client_qmux.so
+vendor/lib/libqmi_client_qmux.so
 lib/libreference-ril.so
 lib/libril-qcril-hook-oem.so
 lib/libsecril-client.so
@@ -211,4 +211,4 @@ lib/libdrmtime.so
 lib/libhdcp2.so
 lib/libQSEEComAPI.so
 lib/libWVStreamControlAPI_L1.so
-lib/libwvm.so
+# lib/libwvm.so

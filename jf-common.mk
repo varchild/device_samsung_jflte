@@ -36,7 +36,8 @@ TARGET_SCREEN_WIDTH := 1080
 PRODUCT_COPY_FILES += \
     device/samsung/jf-common/audio/snd_soc_msm_2x_Fusion3:system/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3 \
     device/samsung/jf-common/audio/audio_policy.conf:system/etc/audio_policy.conf \
-    device/samsung/jf-common/audio/audio_effects.conf:system/etc/audio_effects.conf
+    device/samsung/jf-common/audio/audio_effects.conf:system/etc/audio_effects.conf \
+    frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/etc/permissions/android.hardware.audio.low_latency.xml
 
 # Media Profile
 PRODUCT_COPY_FILES += \
@@ -134,7 +135,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.call_ring.multiple=0 \
     ro.sf.lcd_density=480 \
     ro.ril.transmitpower=true \
-    ro.opengles.version=131072 \
+    ro.opengles.version=196608 \
     persist.audio.fluence.mode=endfire \
     persist.audio.vr.enable=false \
     persist.audio.handset.mic=digital \
@@ -148,9 +149,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ehrpd=true \
     persist.omh.enabled=1 \
     persist.data_netmgrd_nint=16 \
-    lpa.decode=false \
-    tunnel.decode=true \
-    tunnel.audiovideo.decode=true \
+    lpa.decode=true \
     rild.libpath=/system/lib/libril-qc-qmi-1.so \
     ril.subscription.types=NV,RUIM \
     ro.cdma.subscribe_on_ruim_ready=true \

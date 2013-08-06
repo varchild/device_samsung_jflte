@@ -555,5 +555,10 @@ service bugreport /system/bin/bugmailer.sh -v
 	class main
 	disabled
 	oneshot
+
+service ohshitbutton /system/bin/reboot
+	class main
+	disabled
+	oneshot
 	keycodes 114 115 116
 

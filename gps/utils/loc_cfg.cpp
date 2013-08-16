@@ -47,7 +47,7 @@
  *============================================================================*/
 
 /* Parameter data */
-static uint8_t DEBUG_LEVEL = 3;
+static uint8_t DEBUG_LEVEL = 0;
 static uint8_t TIMESTAMP = 0;
 
 /* Parameter spec table */
@@ -78,7 +78,7 @@ SIDE EFFECTS
 static void loc_default_parameters()
 {
    /* defaults */
-   DEBUG_LEVEL = 3; /* debug level */
+   DEBUG_LEVEL = 0; /* debug level */
    TIMESTAMP = 0;
 
    /* reset logging mechanism */

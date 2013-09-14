@@ -16,7 +16,9 @@
 
 <resources>
     <!-- LED Flashlight-->
-     <bool name="has_led_flash">true</bool>
+    <bool name="has_led_flash">true</bool>
     <!-- Volume Rocker Wake -->
     <bool name="config_show_volumeRockerWake">true</bool>
+    <!-- Wake screen when home pressed optional -->
+    <bool name="config_show_homeWake">true</bool>
 </resources>

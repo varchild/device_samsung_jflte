@@ -72,6 +72,8 @@ BOARD_BLUETOOTH_USES_HCIATTACH_PROPERTY := false
 # NFC
 BOARD_NFC_HAL_SUFFIX := msm8960
 
+USE_DEVICE_SPECIFIC_CAMERA := true
+
 # Disable initlogo, Samsungs framebuffer is weird
 TARGET_NO_INITLOGO := true
 

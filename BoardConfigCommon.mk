@@ -31,7 +31,7 @@ BOARD_KERNEL_CMDLINE         := androidboot.hardware=qcom androidboot.selinux=pe
 BOARD_KERNEL_BASE            := 0x80200000
 BOARD_MKBOOTIMG_ARGS         := --ramdisk_offset 0x02000000
 BOARD_KERNEL_PAGESIZE        := 2048
-TARGET_KERNEL_VARIANT_CONFIG := KT_jf_defconfig
+TARGET_KERNEL_VARIANT_CONFIG := cyanogen_jf_defconfig
 TARGET_KERNEL_SELINUX_CONFIG := jfselinux_defconfig
 
 TARGET_BOOTLOADER_BOARD_NAME := MSM8960
@@ -74,8 +74,6 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 
 # NFC
 BOARD_NFC_HAL_SUFFIX := msm8960
-
-USE_DEVICE_SPECIFIC_CAMERA := true
 
 # Disable initlogo, Samsungs framebuffer is weird
 TARGET_NO_INITLOGO := true
@@ -123,6 +121,7 @@ BOARD_SEPOLICY_UNION += \
 	mediaserver.te \
 	mpdecision.te \
 	netmgrd.te \
+	property.te \
 	qmux.te \
 	rild.te \
 	rmt.te \

@@ -48,6 +48,9 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.7
 
+# Adreno configuration
+BOARD_EGL_CFG := device/samsung/jf-common/configs/egl.cfg
+
 # Recovery
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/jf-common/recovery/recovery_keys.c
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"

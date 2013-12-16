@@ -28,6 +28,8 @@ lib/libmmosal.so
 lib/libdivxdrm.so
 
 # Adreno GPU (Available on Nexus 4)
+lib/libadreno_utils.so
+
 vendor/lib/egl/eglsubAndroid.so
 vendor/lib/egl/libEGL_adreno.so
 vendor/lib/egl/libGLESv1_CM_adreno.so
@@ -113,6 +115,7 @@ cameradata/RS_M10MO_SS.bin
 cameradata/datapattern_420sp.yuv
 cameradata/datapattern_front_420sp.yuv
 lib/hw/vendor-camera.msm8960.so:lib/hw/camera.msm8960.so
+lib/libadsprpc.so
 lib/libchromatix_imx074_default_video.so
 lib/libchromatix_imx074_preview.so
 lib/libchromatix_imx074_video_hd.so

@@ -90,15 +90,15 @@ extern char* get_timestamp(char* str, unsigned long buf_size);
 
 #else /* DEBUG_DMN_LOC_API */
 
-#define LOC_LOGE(...) { }
+#define LOC_LOGE(...) ALOGE("E/"__VA_ARGS__)
 
-#define LOC_LOGW(...) { }
+#define LOC_LOGW(...) ALOGW("W/"__VA_ARGS__)
 
-#define LOC_LOGI(...) { }
+#define LOC_LOGI(...) ALOGI("I/"__VA_ARGS__)
 
-#define LOC_LOGD(...) { }
+#define LOC_LOGD(...) ALOGD("D/"__VA_ARGS__)
 
-#define LOC_LOGV(...) { }
+#define LOC_LOGV(...) ALOGV("V/"__VA_ARGS__)
 
 #endif /* DEBUG_DMN_LOC_API */
 

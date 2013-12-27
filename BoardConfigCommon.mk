@@ -36,17 +36,14 @@ TARGET_KERNEL_SELINUX_CONFIG := jfselinux_defconfig
 
 TARGET_BOOTLOADER_BOARD_NAME := MSM8960
 
-TARGET_CPU_ABI := armeabi-v7a
-TARGET_CPU_ABI2 := armeabi
-TARGET_CPU_SMP := true
-TARGET_ARCH := arm
-TARGET_ARCH_VARIANT := armv7-a-neon
-TARGET_ARCH_VARIANT_CPU := cortex-a9
-TARGET_CPU_VARIANT := krait
-TARGET_ARCH_VARIANT_FPU := neon-vfpv4
-ARCH_ARM_HAVE_TLS_REGISTER := true
+# WiFi module
+WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/dhd.ko"
+WIFI_DRIVER_MODULE_NAME := "dhd"
 
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.7
+# QCOM
+BOARD_USES_QCOM_HARDWARE := true
+TARGET_USES_QCOM_BSP := true
+COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE -DQCOM_BSP
 
 # Adreno configuration
 BOARD_EGL_CFG := device/samsung/jf-common/configs/egl.cfg

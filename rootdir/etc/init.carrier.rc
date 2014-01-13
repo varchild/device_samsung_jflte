@@ -25,19 +25,6 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-on init
-
-    # For Absolute Persistence Partition
-    mkdir /persdata 0755 system system
-    mkdir /persdata/absolute 0750 system system
-
-    wait /dev/block/platform/msm_sdcc.1/by-name/persdata
-    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/persdata  /persdata/absolute nosuid nodev barrier=1
-    chown system system /persdata
-    chmod 0755 /persdata
-    chown system system /persdata/absolute
-    chmod 0750 /persdata/absolute
-
 on boot
 
 # permissions for bluetooth.
@@ -63,9 +50,6 @@ on boot
 	chown radio system /sys/class/sec/switch/uart_sel
 	chown radio system /sys/class/sec/switch/apo_factory
 
-# AuthenTec VPNClient Interceptor module
-    insmod /system/lib/modules/vpnclient.ko ssh_procfs_uid=1000 ssh_procfs_gid=1000
-
 # TVout
 service TvoutService_C /system/bin/bintvoutservice
     class main
@@ -81,20 +65,3 @@ service rtccinit /system/bin/rtcc_init -a 400M
     class core
     user root
     oneshot
-
-# AuthenTec VPNClient
-service vpnclientpm /system/bin/vpnclientpm -u 1000 \
-	-O /data/data/com.ipsec.vpnclient/vpnclientpm.txt
-    group system net_admin net_raw
-    disabled
-
-service secstarter /system/bin/secstarter
-    class main
-    user system
-    group system
-
-on property:vpnclientpm.enable=1
-    start vpnclientpm
-
-on property:vpnclientpm.enable=0
-    stop vpnclientpm

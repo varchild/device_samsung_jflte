@@ -7,7 +7,7 @@
 /dev/block/platform/msm_sdcc.1/by-name/recovery    /recovery             emmc    defaults                                                                                           defaults
 /dev/block/platform/msm_sdcc.1/by-name/system      /system               ext4    ro,barrier=1,errors=panic                                                                          wait
 /dev/block/platform/msm_sdcc.1/by-name/cache       /cache                ext4    nosuid,nodev,noatime                                                                               wait,check
-/dev/block/platform/msm_sdcc.1/by-name/persdata    /persdata/absolute    ext4    nosuid,nodev,barrier=1                                                                             wait
+#/dev/block/platform/msm_sdcc.1/by-name/persdata    /persdata/absolute    ext4    nosuid,nodev,barrier=1                                                                             wait,check
 /dev/block/platform/msm_sdcc.1/by-name/apnhlos     /firmware             vfat    ro,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337                                           wait
 /dev/block/platform/msm_sdcc.1/by-name/mdm         /firmware-mdm         vfat    ro,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337                                           wait
 /dev/block/platform/msm_sdcc.1/by-name/efs         /efs                  ext4    nosuid,nodev,noatime                                                                               wait,check

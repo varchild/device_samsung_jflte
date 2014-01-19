@@ -673,6 +673,7 @@ on property:sys.perf.profile=0
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor conservative
     write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor conservative
     write /sys/class/kgsl/kgsl-3d0/pwrscale/trustzone/governor ondemand
+    exec /system/etc/init.d/00kernelcompat
 
 # Balanced
 on property:sys.perf.profile=1
@@ -682,6 +683,7 @@ on property:sys.perf.profile=1
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor interactive
     write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor interactive
     write /sys/class/kgsl/kgsl-3d0/pwrscale/trustzone/governor ondemand
+    exec /system/etc/init.d/00kernelcompat
 
 # High performance
 on property:sys.perf.profile=2
@@ -695,3 +697,4 @@ on property:sys.perf.profile=2
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor performance
     write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor performance
     write /sys/class/kgsl/kgsl-3d0/pwrscale/trustzone/governor performance
+    exec /system/etc/init.d/00kernelcompat

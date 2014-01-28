@@ -22,6 +22,7 @@
 
 # inherit from common msm8960
 -include device/samsung/msm8960-common/BoardConfigCommon.mk
+TARGET_ARCH_VARIANT_CPU := cortex-a15
 
 TARGET_SPECIFIC_HEADER_PATH := device/samsung/jf-common/include
 
